@@ -15,11 +15,18 @@ public class Unit8HW1{
 		int column = sc.nextInt();
 
 		//make sure it is a valid option
+		if (test[0].length > column && column >= 0){
+			columnPrinter(column, test);
+		} else {
+			System.out.println("Inavlid Number!");
+		}
 
 		//print the column number they asked for with each element on a new line
 		
 	}
-	public static void columnPrinter(int columnNumber){
-		System.out.println("");
+	public static void columnPrinter(int columnNumber, int[][] test){
+		for (int[] row : test) {
+			System.out.println(row[columnNumber]);
+		}
 	}
 }
